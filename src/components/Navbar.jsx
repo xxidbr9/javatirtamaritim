@@ -1,5 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
+import withMainContext, {
+  MainContext,
+  CONSTANT,
+} from "../context/Main.context";
 
 const MiniText = (props) => <span className="pl-3">{props.children}</span>;
 
@@ -38,15 +42,20 @@ const BottomNavbar = (props) => {
 
 const Navbar = () => {
   const ref = useRef(null);
+  const { dispatch } = useContext(MainContext);
+
   useEffect(() => {
-    console.log(ref.current.getBoundingClientRect());
-  }, [ref]);
+    dispatch({
+      type: CONSTANT.SET_NAVBAR_HEIGHT,
+      payload: ref.current.getBoundingClientRect().height,
+    });
+  }, [ref, dispatch]);
   return (
-    <nav className="shadow-md fixed w-full" ref={ref}>
+    <nav className="shadow-lg fixed w-full z-50" ref={ref}>
       <TopNavbar />
       <BottomNavbar />
     </nav>
   );
 };
 
-export default Navbar;
+export default withMainContext(Navbar);
