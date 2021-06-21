@@ -5,6 +5,13 @@ import { FiSearch, FiAnchor } from "react-icons/fi";
 import { BiWallet } from "react-icons/bi";
 import { FaWarehouse } from "react-icons/fa";
 import { AiOutlineLock } from "react-icons/ai";
+import ImageBanner from "../../assets/international_trade.jpg";
+import ServiceImage from "../../assets/photo3.jpg";
+import LogoImage from "../../assets/logo.png";
+import ImageList1 from "../../assets/IMG_20210510_161914.jpg";
+import ImageList2 from "../../assets/IMG_20200728_102716.jpg";
+import ImageList3 from "../../assets/IMG_20210220_104537.jpg";
+import ImageList4 from "../../assets/IMG_20210319_163850.jpg";
 
 const Button = (props) => {
   console.log(props.className);
@@ -25,7 +32,7 @@ const Hero = () => (
     <div className="pt-24 bg-black opacity-60 md:h-screen w-full absolute z-20"></div>
     <div
       className="pt-24 bg-no-repeat bg-cover h-screen absolute w-full z-10"
-      style={{ backgroundImage: "url('/international_trade.jpg')" }}
+      style={{ backgroundImage: `url('${ImageBanner}')` }}
     ></div>
     <div className="pt-24 w-full absolute z-30">
       <div className="container m-auto z-50">
@@ -152,7 +159,7 @@ const SortAbout = () => {
   return (
     <section className="container m-auto bg-white relative my-20 z-40 h-auto rounded-2xl grid grid-cols-2 gap-12">
       <div className="bg-pink-500 w-full h-full overflow-hidden rounded-xl">
-        <img src="/photo3.JPG" className="h-full w-full object-cover" alt="" />
+        <img src={ServiceImage} className="h-full w-full object-cover" alt="" />
       </div>
       <div class="py-16 pl-6">
         <AccentSmall>Affordable Price, Certified Forwader</AccentSmall>
@@ -177,7 +184,7 @@ const SortAbout = () => {
 };
 
 const Logo = () => {
-  return <img className="w-full h-full" src="/logo.png" alt="logo" />;
+  return <img className="w-full h-full" src={LogoImage} alt="logo" />;
 };
 
 const ServiceItem = (props) => {
@@ -194,22 +201,22 @@ const ServiceItem = (props) => {
 const ServiceSection = () => {
   const listService = [
     {
-      imgSrc: "/IMG_20210510_161914.jpg",
+      imgSrc: ImageList1,
       text: "Ligula accumsan, ullamcorper",
       href: "",
     },
     {
-      imgSrc: "/IMG_20200728_102716.jpg",
+      imgSrc: ImageList2,
       text: "Sem justo, sodales",
       href: "",
     },
     {
-      imgSrc: "/IMG_20210220_104537.jpg",
+      imgSrc: ImageList3,
       text: "Nam vitae, ornare",
       href: "",
     },
     {
-      imgSrc: "/IMG_20210319_163850.jpg",
+      imgSrc: ImageList4,
       text: "Eleifend sed turpis",
       href: "",
     },
@@ -247,13 +254,9 @@ const ServiceSection = () => {
   );
 };
 
-const ReviewSection =() =>{
-	return (
-		<div>
-			Hello
-		</div>
-	)
-}
+const ReviewSection = () => {
+  return <div>Hello</div>;
+};
 
 const HomeLayout = () => {
   return (
@@ -263,7 +266,7 @@ const HomeLayout = () => {
       <HomeService />
       <SortAbout />
       <ServiceSection />
-			<ReviewSection />
+      <ReviewSection />
     </>
   );
 };
