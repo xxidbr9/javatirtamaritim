@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import withMainContext, { MainContext } from "../../context/Main.context";
-import { FiSearch, FiAnchor } from "react-icons/fi";
+import withMainContext from "../../context/Main.context";
+import { FiSearch } from "react-icons/fi";
 import { BiWallet } from "react-icons/bi";
 import { FaWarehouse } from "react-icons/fa";
 import { AiOutlineLock } from "react-icons/ai";
+import Slider from "react-slick";
 import ImageBanner from "../../assets/international_trade.jpg";
 import ServiceImage from "../../assets/photo3.jpg";
 import LogoImage from "../../assets/logo.png";
@@ -18,9 +19,8 @@ const Button = (props) => {
   return (
     <a
       {...props}
-      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${
-        !!props.className && props.className
-      }`}
+      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${!!props.className && props.className
+        }`}
     >
       {props.children}
     </a>
@@ -141,7 +141,7 @@ const AccentSmall = (props) => {
 
 const Title = (props) => {
   return (
-    <h4 {...props} className="mt-1 text-3xl font-medium">
+    <h4 {...props} className="mt-1 text-3xl font-semibold">
       {props.children}
     </h4>
   );
@@ -164,7 +164,10 @@ const SortAbout = () => {
       <div class="py-16 pl-6">
         <AccentSmall>Affordable Price, Certified Forwader</AccentSmall>
         <Title>
-          Safe, Reliable & Express Logistic Solution That Save Your Time!
+          Safe, Reliable & Express Logistic
+        </Title>
+        <Title>
+          Solution That Save Your Time!
         </Title>
         <div>
           <Paragraph>
@@ -254,9 +257,116 @@ const ServiceSection = () => {
   );
 };
 
+
+
+function Arrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      // {...props}
+      className={`${!!className ? className : ""} bg-pink-500 w-10 h-10 overflow-hidden rounded-full shadow-lg`}
+      style={{ ...style, color: "white", zIndex: "10", background: "white", height: "40px", width: "40px", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "2rem" }}
+      onClick={onClick}
+    />
+  );
+}
+
+
 const ReviewSection = () => {
-  return <div>Hello</div>;
+
+  const setting = {
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 2000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />
+  }
+
+
+  const ReviewComponent = (props) => {
+    return (
+      <div className="w-full h-40 py-4 px-5 ">
+        <div className="py-5  h-full w-full flex shadow-xl rounded-xl" >
+          <div className="ml-5 h-16 w-16 overflow-hidden rounded-full bg-gray-100">
+            <img src={props.imgSrc} className="w-full h-full object-cover" alt="" />
+          </div>
+          <div className="ml-5  h-full  w-3/4 overflow-hidden flex flex-col">
+            <h4 className="text-base font-medium">{props.name}</h4>
+            <p className="text-sm text-gray-500 italic">{props.text}</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  const text = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ipsam itaque assumenda in id quidem molestiae fugit autem ratione dignissimos!"
+  const dataReview = [
+    { text, name: "Barnando Akbarto", imgSrc: "https://source.unsplash.com/random/1" },
+    { text, name: "Andhana Utama", imgSrc: "https://source.unsplash.com/random/2" },
+    { text, name: "Ronaldo Wati", imgSrc: "https://source.unsplash.com/random/3" },
+    { text, name: "David Backam", imgSrc: "https://source.unsplash.com/random/4" },
+    { text, name: "Leonardo De Caprio", imgSrc: "https://source.unsplash.com/random/5" },
+    { text, name: "John Cen", imgSrc: "https://source.unsplash.com/random/6" },
+  ]
+
+  return (
+    <section className="container mx-auto py-10 text-center">
+      <div className="text-center">
+        <AccentSmall>
+          Our Beloved Review’s
+        </AccentSmall>
+        <Title>Here’s what our Happy client </Title>
+        <Title>are saying about us :</Title>
+        <div className="my-10">
+          <div className="w-4/5 mx-auto text-left">
+            <Slider
+              {...setting}
+            >
+              {dataReview.map((e, i) => {
+                return (
+                  <ReviewComponent
+                    imgSrc={e.imgSrc}
+                    name={e.name}
+                    text={e.text}
+                    key={i}
+                  />
+                )
+              })}
+            </Slider>
+          </div>
+        </div>
+        <div className="w-3/4 text-center m-auto">
+          <Paragraph>
+            Kami selalu menjunjung tinggi akan integritas dan inovasi yang tiada henti terhadap bidang2 jasa yang kami sediakan yang berorientasi pada kepuasan pelanggan yang dihasilkan dari pendekatan pada setiap prosesnya.
+          </Paragraph>
+        </div>
+      </div>
+    </section>);
 };
+
+
+const SubscribeSection = (props) => {
+  return (
+    <div className="h-96 bg-red-500">
+      <div className="container mx-auto pt-20 text-center text-white">
+        <Title>Don’t miss any updates!</Title>
+        <div className="mx-auto mt-20 w-2/6 h-72 bg-white rounded-xl shadow-xl text-black py-10 px-5">
+          <p>Subscribe email kita untuk lebih cepat dalam informasi terbaru dari kami</p>
+          <div className="relative h-full">
+            <div className="block w-full absolute bottom-10">
+              <input type="text" placeholder="eg: johndoe@mail.com" className="border-2 text-black bg-white py-3 px-6 rounded-xl outline-none focus:border-black w-full" />
+              <button className="outline-none w-full mt-5 bg-black text-white py-3 px-6 rounded-xl font-medium" >Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  )
+}
 
 const HomeLayout = () => {
   return (
@@ -267,6 +377,8 @@ const HomeLayout = () => {
       <SortAbout />
       <ServiceSection />
       <ReviewSection />
+      <SubscribeSection />
+      <div className="h-screen"></div>
     </>
   );
 };
