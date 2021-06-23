@@ -46,7 +46,7 @@ const BottomNavbar = (props) => {
 const Navbar = (props) => {
 
   const [show, setShow] = useState(false)
-  const [yLog, setYLog] = useState(0)
+  const [yLog, setYLog] = useState(-1000)
 
   useEffect(() => {
     if (!!show) {
