@@ -14,6 +14,7 @@ import ImageList2 from "../../assets/IMG_20200728_102716.jpg";
 import ImageList3 from "../../assets/IMG_20210220_104537.jpg";
 import ImageList4 from "../../assets/IMG_20210319_163850.jpg";
 import { createBreakpoint } from 'react-use'
+import Footer from '../../components/Footer'
 
 const useBreakpoint = createBreakpoint();
 const Button = (props) => {
@@ -45,8 +46,7 @@ const Hero = () => (
             Solution to save your Time!
           </h1>
           <p className="text-white font-medium mt-8">
-            Competitive adventages to some of the largest companies all over the
-            indonesia
+            Kualitas terbaik pada setiap pelayanan dalam dunia pelayaran untuk memperoleh rasa aman dan nyaman
           </p>
           <div className=" mt-10">
             <Button href="/about">About Us</Button>
@@ -84,29 +84,29 @@ const HomeService = () => {
 	diam donec eget lectusr`;
   const dataService = [
     {
-      header: "Transparant Pricing",
-      text,
+      header: "FREIGHT FORWARDING",
+      text: "Menyalurkan akan kebutuhan logistik dari satu tempat ke tempat yang lainnya ",
       icon: BiWallet,
       isBorderLeft: false,
       isBorderRight: false,
     },
     {
-      header: "Real-time Tracking",
-      text,
+      header: "SHIP / EQUIPMENT CHARTERING",
+      text: "Menyediakan / menyewakan moda transportasi air dan kebutuhan alat berat (kapal dan alat2 berat)",
       icon: FiSearch,
       isBorderLeft: true,
       isBorderRight: false,
     },
     {
-      header: "Warehouse Storage",
-      text,
+      header: "BUNKERING SERVICES",
+      text: "Jasa penyediaan produk sebagaimana bahan bakar untuk kendaraan bermotor, pelumas kendaraan bermotor dan air bersih",
       icon: FaWarehouse,
       isBorderLeft: true,
       isBorderRight: true,
     },
     {
-      header: "Security For Cargo",
-      text,
+      header: "SHIP MAINTENANCE",
+      text: "Jasa pemeliharaan terhadap structural dan alat2 pendukung pada kapal laut",
       icon: AiOutlineLock,
       isBorderLeft: false,
       isBorderRight: false,
@@ -158,25 +158,21 @@ const Paragraph = (props) => {
 const SortAbout = () => {
   return (
     <section className="tablet:px-8 mobile:px-4 desktop:px-0">
-      <div className="container mx-auto bg-white relative my-20 z-40 h-auto rounded-2xl grid mobile:grid-cols-1 laptop:grid-cols-2 gap-12">
+      <div className="tablet:container mx-auto bg-white relative my-20 z-40 h-auto rounded-2xl grid mobile:grid-cols-1 laptop:grid-cols-2 gap-12">
         <div className="bg-grey-200 w-full h-full overflow-hidden rounded-xl mobile:hidden laptop:block">
           <img src={ServiceImage} className="h-full w-full object-cover" alt="" />
         </div>
         <div class="py-16 laptop:pl-6">
           <AccentSmall>Affordable Price, Certified Forwader</AccentSmall>
           <Title>
-            Safe, Reliable & Express Logistic
+            One Stop Service
           </Title>
           <Title>
-            Solution That Save Your Time!
+            And Stop Soolution
           </Title>
           <div>
             <Paragraph>
-              Manfaat dari perusahaan yang didirikan pada tanggal 04 Juni 2021
-              adalah untuk memberikan pelayanan terbaik yang menjunjung tinggi
-              nilai nilai kejujuran, solutifitas dan efektifitas yang berbasis
-              kompetensi dan kualifikasi dalam tiap2 bidang dari pelayanan yang
-              kami sediakan.
+              Tujuan atau historical didirikannya perusahaan / organisasi adalah ditujukan untuk kebutuhan pada moda transportasi laut di Indonesia yang semakin hari semakin popular akan bertambahnya kebutuhan jasa di bidang industri ataupun pertambangan di Indonesia.
             </Paragraph>
           </div>
           <div className="mt-24 mobile:w-full laptop:w-auto mobile:text-center laptop:text-left">
@@ -229,7 +225,7 @@ const ServiceSection = () => {
 
   return (
     <section className="tablet:px-8 mobile:px-4 desktop:px-0">
-      <div className="tablet:container m-auto my-16">
+      <div className="container m-auto my-16">
         <div className="text-center">
           <AccentSmall>
             Best Global and Indonesia Solutions, Real Fast!
@@ -278,9 +274,6 @@ function Arrow(props) {
 const ReviewSection = () => {
 
   const breakpoint = useBreakpoint()
-
-  console.log(breakpoint)
-
   const setting = {
     infinite: true,
     autoplay: true,
@@ -321,8 +314,8 @@ const ReviewSection = () => {
   ]
 
   return (
-    <section className="tablet:container mx-auto py-10 text-center">
-      <div className="text-center">
+    <section className="py-10 text-center">
+      <div className="mobile:px-4 tablet:px-8 laptop:px-0 tablet:container mx-auto text-center">
         <AccentSmall>
           Our Beloved Review’s
         </AccentSmall>
@@ -358,13 +351,13 @@ const ReviewSection = () => {
 
 const SubscribeSection = (props) => {
   return (
-    <div className="h-96 bg-red-500">
+    <div className="h-96 bg-red-500 z-20">
       <div className="container mx-auto pt-20 text-center text-white">
         <Title>Don’t miss any updates!</Title>
         <div className="mx-auto mt-20 laptop:w-2/6 tablet:w-2/3 mobile:w-full h-72 bg-white rounded-xl shadow-xl text-black py-10 px-5">
           <p>Subscribe email kita untuk lebih cepat dalam informasi terbaru dari kami</p>
           <div className="relative h-full">
-            <div className="block w-full absolute bottom-10">
+            <div className="block w-full absolute bottom-10 z-20">
               <input type="text" placeholder="eg: johndoe@mail.com" className="border-2 text-black bg-white py-3 px-6 rounded-xl outline-none focus:border-black w-full" />
               <button className="outline-none w-full mt-5 bg-black text-white py-3 px-6 rounded-xl font-medium" >Subscribe</button>
             </div>
@@ -391,10 +384,5 @@ const HomeLayout = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <div className="h-screen"></div>
-  )
-}
 
 export default withMainContext(HomeLayout);
