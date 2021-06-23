@@ -61,7 +61,7 @@ const Navbar = (props) => {
       <TopNavbar />
       <BottomNavbar active={props.active} setShow={setShow} show={show} />
       <motion.div className="mobile:bg-white mobile:w-full laptop:hidden z-10 absolute" animate={{ y: yLog }} transition={{ ease: "backInOut", duration: .5, bounce: 0.02, type: "just" }}>
-        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full container tablet:px-8">
+        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full tablet:container tablet:px-8">
           <a href="/"><li className={`${props.active === "/home" ? "text-red-500" : ""} + my-5`}>Home</li></a>
           <a href="/service"><li className={`${props.active === "/service" ? "text-red-500" : ""} + my-5`}>Service</li></a>
           <a href="/galery"><li className={`${props.active === "/galery" ? "text-red-500" : ""} + my-5`}>Galery</li></a>
