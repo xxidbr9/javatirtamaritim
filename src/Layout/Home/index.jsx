@@ -225,7 +225,7 @@ const ServiceSection = () => {
 
   return (
     <section className="tablet:px-8 mobile:px-4 desktop:px-0">
-      <div className="container m-auto my-16">
+      <div className="tablet:container m-auto my-16">
         <div className="text-center">
           <AccentSmall>
             Best Global and Indonesia Solutions, Real Fast!
@@ -314,8 +314,8 @@ const ReviewSection = () => {
   ]
 
   return (
-    <section className="py-10 text-center">
-      <div className="mobile:px-4 tablet:px-8 laptop:px-0 tablet:container mx-auto text-center">
+    <section className="py-10 text-center mobile:px-4 tablet:px-8 laptop:px-0 ">
+      <div className="tablet:container mx-auto text-center">
         <AccentSmall>
           Our Beloved Review’s
         </AccentSmall>
@@ -339,7 +339,7 @@ const ReviewSection = () => {
             </Slider>
           </div>
         </div>
-        <div className="tablet:px-8 mobile:px-4 mobile:container mobile:w-full tablet:w-3/4 text-center m-auto">
+        <div className="tablet:container mobile:w-full tablet:w-3/4 text-center m-auto">
           <Paragraph>
             Kami selalu menjunjung tinggi akan integritas dan inovasi yang tiada henti terhadap bidang2 jasa yang kami sediakan yang berorientasi pada kepuasan pelanggan yang dihasilkan dari pendekatan pada setiap prosesnya.
           </Paragraph>
@@ -352,7 +352,7 @@ const ReviewSection = () => {
 const SubscribeSection = (props) => {
   return (
     <div className="h-96 bg-red-500 z-20">
-      <div className="container mx-auto pt-20 text-center text-white">
+      <div className="tablet:container mx-auto pt-20 text-center text-white">
         <Title>Don’t miss any updates!</Title>
         <div className="mx-auto mt-20 laptop:w-2/6 tablet:w-2/3 mobile:w-full h-72 bg-white rounded-xl shadow-xl text-black py-10 px-5">
           <p>Subscribe email kita untuk lebih cepat dalam informasi terbaru dari kami</p>
