@@ -24,7 +24,7 @@ const withMainContext = (App) => {
     const [state, dispatch] = useReducer(reducer, initState);
     return (
       <MainContext.Provider value={{ state, dispatch }}>
-        <App />
+        <App {...props} />
       </MainContext.Provider>
     );
   };

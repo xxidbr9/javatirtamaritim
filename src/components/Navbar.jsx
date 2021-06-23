@@ -1,23 +1,19 @@
-import React, { useEffect, useRef, useContext } from "react";
-import { FiPhone, FiMail } from "react-icons/fi";
-import withMainContext, {
-  MainContext,
-  CONSTANT,
-} from "../context/Main.context";
-
+import React, { useEffect, useState } from "react";
+import { FiPhone, FiMail, FiMenu } from "react-icons/fi";
+import { motion } from 'framer-motion'
 const MiniText = (props) => <span className="pl-3">{props.children}</span>;
 
 const TopNavbar = (props) => {
   return (
-    <nav className="w-full bg-black">
-      <div className="container flex flex-row-reverse items-center text-white text-sm h-6 font-medium m-auto">
+    <nav className="mobile:hidden tablet:block w-full bg-black z-30 relative">
+      <div className="tablet:container mobile:px-4 tablet:px-8 laptop:px-0 flex flex-row-reverse items-center text-white text-sm h-6 font-medium m-auto">
         <div className="flex items-center">
           <FiMail />
-          <MiniText>Javatirtamaritim@gmail.com</MiniText>
+          <MiniText><a href="mailto:javatirtamaritim@gmail.com">javatirtamaritim@gmail.com</a></MiniText>
         </div>
         <div className="flex items-center mr-5">
           <FiPhone />
-          <MiniText>+62 778 7490 805</MiniText>
+          <MiniText><a href="https://wa.me/627787490805?text=Hallo, Java Tirta Maritim">+62 778 7490 805</a></MiniText>
         </div>
       </div>
     </nav>
@@ -25,37 +21,55 @@ const TopNavbar = (props) => {
 };
 
 const BottomNavbar = (props) => {
+
+
+
   return (
-    <nav className="w-full bg-white h-16">
-      <div className="container h-full m-auto flex justify-between items-center">
-        <span className="uppercase font-bold text-2xl">JAVA TIRTA</span>
-        <ul className="flex flex-row gap-10 font-medium">
-          <li className="text-red-500">Home</li>
-          <li>Service</li>
-          <li>Galery</li>
-          <li>About</li>
-        </ul>
-      </div>
-    </nav>
+    <>
+      <nav className="w-full bg-white h-16 z-30 relative">
+        <div className="tablet:container tablet:px-8 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
+          <span className="uppercase font-bold text-2xl">JAVA TIRTA</span>
+          <button className="outline-none laptop:hidden" onClick={() => props.setShow(!props.show)}><FiMenu /></button>
+          <ul className="mobile:hidden laptop:flex flex-row gap-10 font-medium">
+            <li className={`${props.active === "/home" ? "text-red-500" : ""}`}><a href="/">Home</a></li>
+            <li className={`${props.active === "/service" ? "text-red-500" : ""}`}><a href="/service">Service</a></li>
+            <li className={`${props.active === "/galery" ? "text-red-500" : ""}`}><a href="/galery">Galery</a></li>
+            <li className={`${props.active === "/about" ? "text-red-500" : ""}`}><a href="/about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </>
   );
 };
 
-const Navbar = () => {
-  const ref = useRef(null);
-  const { dispatch } = useContext(MainContext);
+const Navbar = (props) => {
+
+  const [show, setShow] = useState(false)
+  const [yLog, setYLog] = useState(0)
 
   useEffect(() => {
-    dispatch({
-      type: CONSTANT.SET_NAVBAR_HEIGHT,
-      payload: ref.current.getBoundingClientRect().height,
-    });
-  }, [ref, dispatch]);
+    if (!!show) {
+      setYLog(0)
+    } else {
+      setYLog(-1000)
+    }
+  }, [show])
+
   return (
-    <nav className="shadow-lg fixed w-full z-50" ref={ref}>
+    <nav className="shadow-lg fixed w-full z-50">
       <TopNavbar />
-      <BottomNavbar />
+      <BottomNavbar active={props.active} setShow={setShow} show={show}/>
+      <motion.div className="mobile:bg-white mobile:w-full laptop:hidden z-10 absolute" animate={{ y: yLog }} transition={{ ease: "backInOut", duration: .5 }}>
+        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full container tablet:px-8">
+          <a href="/"><li className={`${props.active === "/home" ? "text-red-500" : ""} + my-5`}>Home</li></a>
+          <a href="/service"><li className={`${props.active === "/service" ? "text-red-500" : ""} + my-5`}>Service</li></a>
+          <a href="/galery"><li className={`${props.active === "/galery" ? "text-red-500" : ""} + my-5`}>Galery</li></a>
+          <a href="/about"><li className={`${props.active === "/about" ? "text-red-500" : ""} + my-5`}>About</li></a>
+        </ul>
+      </motion.div>
     </nav>
   );
 };
 
-export default withMainContext(Navbar);
+export default Navbar
