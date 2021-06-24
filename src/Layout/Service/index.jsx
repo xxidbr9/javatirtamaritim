@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import ImageBanner from "../../assets/international_trade.jpg";
+import ImageBanner from "../../assets/images/international_trade.jpg";
 
 const Hero = () => (
   <section className="mobile:h-80">

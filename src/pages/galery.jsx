@@ -1,10 +1,24 @@
 import React from "react";
+import GaleryLayout from "../Layout/Galery";
+import { useStaticQuery, graphql } from 'gatsby'
+
+
 
 const GaleryPage = () => {
+  const { allFile: { edges } } = useStaticQuery(graphql`
+  query allImage{
+    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+      edges {
+        node {
+          name
+          extension
+        }
+      }
+    }
+  }`)
+
   return (
-    <div className="container">
-      <div className="w-full bg-red-500 h-full">hello mantap seep</div>
-    </div>
+    <GaleryLayout imageData={edges} />
   );
 };
 

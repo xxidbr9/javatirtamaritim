@@ -6,13 +6,13 @@ import { BiWallet } from "react-icons/bi";
 import { FaWarehouse } from "react-icons/fa";
 import { AiOutlineLock } from "react-icons/ai";
 import Slider from "react-slick";
-import ImageBanner from "../../assets/international_trade.jpg";
-import ServiceImage from "../../assets/photo3.jpg";
 import LogoImage from "../../assets/logo.png";
-import ImageList1 from "../../assets/IMG_20210510_161914.jpg";
-import ImageList2 from "../../assets/IMG_20200728_102716.jpg";
-import ImageList3 from "../../assets/IMG_20210220_104537.jpg";
-import ImageList4 from "../../assets/IMG_20210319_163850.jpg";
+import ImageBanner from "../../assets/images/international_trade.jpg";
+import ServiceImage from "../../assets/images/photo3.jpg";
+import ImageList1 from "../../assets/images/IMG_20210510_161914.jpg";
+import ImageList2 from "../../assets/images/IMG_20200728_102716.jpg";
+import ImageList3 from "../../assets/images/IMG_20210220_104537.jpg";
+import ImageList4 from "../../assets/images/IMG_20210319_163850.jpg";
 import { createBreakpoint } from 'react-use'
 import Footer from '../../components/Footer'
 
@@ -82,43 +82,6 @@ const HomeService = () => {
 	orci in facilisi in dictum bibendum. Scelerisque turpis ornare nunc
 	diam donec eget lectusr`;
 
-  /*
-  FREIGHT FORWARDING
-  Logistics delivery services for exort and import businesses from one destination to another throught sea transportation modes.
-
-  SHIP / EQUIPMET CHARTERING  
-  Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment.
-
-  BUNKERING SERVICES 
-  Services for providing fuel oil sucs as MGO MFO and MDo, libricants and fresh water.
-
-  MACHINERIES AND ELECTRICAL SERVICES 
-  Maintenace, repair and replacement services for equipment on ships.
-
-  SHIP REPAIRS and MANAGEMENT 
-  Repair services to ship structures and carry out managerial improvements
-
-  DOCKING MANAGEMENT
-  Management services before to after ship repair carried out at shipyard.
-
-  SHIP MAINTENANCE 
-  Maintenance and repair services for structural and port supporting equipment.
-
-  NON DESTRUCTIVE TESTING (NDT) SERVICE 
-  Testting services or inspection of critical areas sucs as welding and base metal to detect crack or deflacts in the objects being tested without demaging the objects.
-
-  MARINE, PATROLEUM AND CARGO SERVEYOR, CONSULTANT 
-  Service for survey and inspection activities for shipping and cargo safety along with consulting services in the maritime sector.
-
-  UNDERWATER INSPECTION IN LIEU OF DRY DOCKING (UWILD) SURVEY 
-  Services for inspecting activities of the outside of the ship below the waterline carried out when the ship remains above sea level with certain technological methods.
-
-  UNDERWATER SURVEY AND HULL CLEANSING 
-  Hull inspection and cleaning services such as sticking coral without going through the dry dock process.
-
-  TANK CLEANING 
-  Services for cleaning activities for the remnants of cargo or dirt attached to the ship's tank becouse unclear water tanks act as breading ground for bacteria and making your water tank's environment susceptible to being contaminated
-  */
   const dataService = [
     {
       header: "FREIGHT FORWARDING",
