@@ -5,13 +5,13 @@ import Hero from '../../components/Hero'
 import ImageBanner from "../../assets/images/international_trade.jpg";
 
 
-const AccentSmall = (props) => {
-  return (
-    <span {...props} className="text-red-500 font-medium">
-      {props.children}
-    </span>
-  );
-};
+// const AccentSmall = (props) => {
+//   return (
+//     <span {...props} className="text-red-500 font-medium">
+//       {props.children}
+//     </span>
+//   );
+// };
 
 const Title = (props) => {
   return (
@@ -56,7 +56,7 @@ const AboutLayout = () => {
               </Paragraph>
             </div>
           </div>
-          <div class="py-16 laptop:pl-6 col-span-2 text-center">
+          <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
             <Title>
               Mision
             </Title>
