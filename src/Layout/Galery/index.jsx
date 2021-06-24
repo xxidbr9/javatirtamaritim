@@ -5,26 +5,10 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import Hero from '../../components/Hero'
+
 import ImageBanner from "../../assets/images/international_trade.jpg";
 
-const Hero = () => (
-  <section className="mobile:h-80">
-    <div className="pt-24 bg-black opacity-60 mobile:h-80 w-full absolute z-20"></div>
-    <div
-      className="pt-24 bg-no-repeat bg-cover h-80 absolute w-full z-10"
-      style={{ backgroundImage: `url('${ImageBanner}')` }}
-    ></div>
-    <div className="mobile:pt-12 tablet:pt-24 w-full absolute z-30">
-      <div className="tablet:container tablet:px-8 mobile:px-4 desktop:px-0 m-auto z-50">
-        <div className="w-full mt-20">
-          <h1 className="mobile:text-4xl tablet:text-6xl text-white font-bold">
-            Our Galery
-          </h1>
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
 const ZoomImage = ({ imgSrc, ...props }) => {
   const [isZoomed, setIsZoomed] = useState(false)
@@ -50,7 +34,7 @@ const GaleryLayout = ({ imageData, ...props }) => {
   return (
     <React.Fragment>
       <Navbar active="/galery" />
-      <Hero />
+      <Hero title={"Our Galery"} ImageBanner={ImageBanner} />
       <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
         <div className="tablet:container mx-auto">
           <ResponsiveMasonry

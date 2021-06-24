@@ -10,7 +10,7 @@ const Footer = () => {
             <h4 className="text-gray-600">PT. Java Tirta Maritim</h4>
           </div>
           <div className="tablet:text-right">
-            <h3 className="mobile:mt-5  uppercase font-bold text-lg">Alamat</h3>
+            <h3 className="mobile:mt-5  uppercase font-bold text-lg">Address</h3>
             <p className="tablet:mt-0 tablet:text-right text-gray-600">Ruko Mega Legenda Blok C2 No. 27 <br /> Batam Centre <br /> Batam - Indonesia</p>
 
             <h3 className="mt-5 uppercase font-bold text-lg">Contact</h3>
