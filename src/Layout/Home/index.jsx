@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/Navbar";
 import withMainContext from "../../context/Main.context";
 import { FiSearch } from "react-icons/fi";
@@ -78,10 +78,6 @@ const ItemService = ({
 };
 
 const HomeService = () => {
-  const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam ut sit
-	orci in facilisi in dictum bibendum. Scelerisque turpis ornare nunc
-	diam donec eget lectusr`;
-
   const dataService = [
     {
       header: "FREIGHT FORWARDING",

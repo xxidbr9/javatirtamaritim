@@ -29,10 +29,6 @@ const Hero = () => (
 const ZoomImage = ({ imgSrc, ...props }) => {
   const [isZoomed, setIsZoomed] = useState(false)
 
-  const handleImgLoad = useCallback(() => {
-    setIsZoomed(true)
-  }, [])
-
   const handleZoomChange = useCallback(shouldZoom => {
     setIsZoomed(shouldZoom)
   }, [])
@@ -42,6 +38,7 @@ const ZoomImage = ({ imgSrc, ...props }) => {
       <img
         className={`p-1 ${isZoomed ? "" : "rounded-2xl"}`}
         src={imgSrc}
+        alt="img galery"
         style={{ width: "100%", display: "block" }} />
     </ControlledZoom>
   )
