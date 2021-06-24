@@ -46,7 +46,7 @@ const Hero = () => (
             Solution to save your Time!
           </h1>
           <p className="text-white font-medium mt-8">
-            Kualitas terbaik pada setiap pelayanan dalam dunia pelayaran untuk memperoleh rasa aman dan nyaman
+            The best quality solution in every service in the world of shipping to get a sense of security and comfort
           </p>
           <div className=" mt-10">
             <Button href="/about">About Us</Button>
@@ -54,7 +54,6 @@ const Hero = () => (
         </div>
       </div>
     </div>
-    hello
   </section>
 );
 
@@ -82,31 +81,70 @@ const HomeService = () => {
   const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam ut sit
 	orci in facilisi in dictum bibendum. Scelerisque turpis ornare nunc
 	diam donec eget lectusr`;
+
+  /*
+  FREIGHT FORWARDING
+  Logistics delivery services for exort and import businesses from one destination to another throught sea transportation modes.
+
+  SHIP / EQUIPMET CHARTERING  
+  Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment.
+
+  BUNKERING SERVICES 
+  Services for providing fuel oil sucs as MGO MFO and MDo, libricants and fresh water.
+
+  MACHINERIES AND ELECTRICAL SERVICES 
+  Maintenace, repair and replacement services for equipment on ships.
+
+  SHIP REPAIRS and MANAGEMENT 
+  Repair services to ship structures and carry out managerial improvements
+
+  DOCKING MANAGEMENT
+  Management services before to after ship repair carried out at shipyard.
+
+  SHIP MAINTENANCE 
+  Maintenance and repair services for structural and port supporting equipment.
+
+  NON DESTRUCTIVE TESTING (NDT) SERVICE 
+  Testting services or inspection of critical areas sucs as welding and base metal to detect crack or deflacts in the objects being tested without demaging the objects.
+
+  MARINE, PATROLEUM AND CARGO SERVEYOR, CONSULTANT 
+  Service for survey and inspection activities for shipping and cargo safety along with consulting services in the maritime sector.
+
+  UNDERWATER INSPECTION IN LIEU OF DRY DOCKING (UWILD) SURVEY 
+  Services for inspecting activities of the outside of the ship below the waterline carried out when the ship remains above sea level with certain technological methods.
+
+  UNDERWATER SURVEY AND HULL CLEANSING 
+  Hull inspection and cleaning services such as sticking coral without going through the dry dock process.
+
+  TANK CLEANING 
+  Services for cleaning activities for the remnants of cargo or dirt attached to the ship's tank becouse unclear water tanks act as breading ground for bacteria and making your water tank's environment susceptible to being contaminated
+  */
   const dataService = [
     {
       header: "FREIGHT FORWARDING",
-      text: "Menyalurkan akan kebutuhan logistik dari satu tempat ke tempat yang lainnya ",
+      text: "Logistics delivery services for exort and import businesses from one destination to another throught sea transportation modes",
       icon: BiWallet,
       isBorderLeft: false,
       isBorderRight: false,
     },
+
     {
-      header: "SHIP / EQUIPMENT CHARTERING",
-      text: "Menyediakan / menyewakan moda transportasi air dan kebutuhan alat berat (kapal dan alat2 berat)",
+      header: "SHIP / EQUIPMET CHARTERING ",
+      text: "Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment",
       icon: FiSearch,
       isBorderLeft: true,
       isBorderRight: false,
     },
     {
       header: "BUNKERING SERVICES",
-      text: "Jasa penyediaan produk sebagaimana bahan bakar untuk kendaraan bermotor, pelumas kendaraan bermotor dan air bersih",
+      text: "Services for providing fuel oil sucs as MGO MFO and MDo, libricants and fresh water",
       icon: FaWarehouse,
       isBorderLeft: true,
       isBorderRight: true,
     },
     {
-      header: "SHIP MAINTENANCE",
-      text: "Jasa pemeliharaan terhadap structural dan alat2 pendukung pada kapal laut",
+      header: "SHIP REPAIRS and MANAGEMENT",
+      text: "Repair services to ship structures and carry out managerial improvements",
       icon: AiOutlineLock,
       isBorderLeft: false,
       isBorderRight: false,
@@ -172,11 +210,11 @@ const SortAbout = () => {
           </Title>
           <div>
             <Paragraph>
-              Tujuan atau historical didirikannya perusahaan / organisasi adalah ditujukan untuk kebutuhan pada moda transportasi laut di Indonesia yang semakin hari semakin popular akan bertambahnya kebutuhan jasa di bidang industri ataupun pertambangan di Indonesia.
+              The purpose of the historical establishment of the company/organization is aimed at the needs of marine transportation modes in Indonesia which are increasingly popular with the increasing need for services in the industrial or mining sector in Indonesia..
             </Paragraph>
           </div>
           <div className="mt-24 mobile:w-full laptop:w-auto mobile:text-center laptop:text-left">
-            <Button href="/service">Lihat semua service</Button>
+            <Button href="/service">See All Services</Button>
           </div>
         </div>
       </div>
@@ -236,11 +274,7 @@ const ServiceSection = () => {
           </div>
           <div className="mobile:w-full tablet:w-3/4 text-center m-auto">
             <Paragraph>
-              Manfaat dari perusahaan yang didirikan pada tanggal 04 Juni 2021
-              adalah untuk memberikan pelayanan terbaik yang menjunjung tinggi
-              nilai nilai kejujuran, solutifitas dan efektifitas yang berbasis
-              kompetensi dan kualifikasi dalam tiap2 bidang dari pelayanan yang
-              kami sediakan.
+              The benefit of a company founded on 04 June 2021 is to provide the best service that upholds values of honesty, solubility, and effectiveness based on competence and qualifications in each area of the service we provide.
             </Paragraph>
           </div>
         </div>
@@ -250,7 +284,7 @@ const ServiceSection = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Button href="/galery">Lihat semua foto</Button>
+          <Button href="/galery">See Our Galery</Button>
         </div>
       </div>
     </section>
@@ -289,12 +323,12 @@ const ReviewSection = () => {
 
   const ReviewComponent = (props) => {
     return (
-      <div className="w-full h-40 py-4 px-5 ">
-        <div className="py-5  h-full w-full flex shadow-xl rounded-xl" >
-          <div className="ml-5 h-16 w-16 overflow-hidden rounded-full bg-gray-100">
+      <div className="w-full tablet:h-40 py-4 tablet:px-5 mobile:h-auto">
+        <div className="py-5 mobile:px-4 h-full w-full flex shadow-xl rounded-xl" >
+          <div className="ml-5 tablet:h-16 tablet:w-16 mobile:h-14 mobile:w-14 overflow-hidden rounded-full bg-gray-100">
             <img src={props.imgSrc} className="w-full h-full object-cover" alt="" />
           </div>
-          <div className="ml-5  h-full  w-3/4 overflow-hidden flex flex-col">
+          <div className="ml-5  h-full  tablet:w-3/4 mobile:w-4/5 overflow-hidden flex flex-col">
             <h4 className="text-base font-medium">{props.name}</h4>
             <p className="text-sm text-gray-500 italic">{props.text}</p>
           </div>
@@ -314,13 +348,15 @@ const ReviewSection = () => {
   ]
 
   return (
-    <section className="py-10 text-center mobile:px-4 tablet:px-8 laptop:px-0 ">
+    <section className="py-10 text-center mobile:px-0 tablet:px-8 laptop:px-0 ">
       <div className="tablet:container mx-auto text-center">
         <AccentSmall>
           Our Beloved Review’s
         </AccentSmall>
-        <Title>Here’s what our Happy client </Title>
-        <Title>are saying about us :</Title>
+        <div className="mobile:px-4 tablet:px-0">
+          <Title>Here’s what our Happy client </Title>
+          <Title>are saying about us :</Title>
+        </div>
         <div className="my-10">
           <div className="mobile:w-full tablet:w-4/5 mx-auto text-left">
             <Slider
@@ -339,9 +375,9 @@ const ReviewSection = () => {
             </Slider>
           </div>
         </div>
-        <div className="tablet:container mobile:w-full tablet:w-3/4 text-center m-auto">
+        <div className="mobile:px-4 tablet:container mobile:w-full tablet:w-3/4 text-center m-auto">
           <Paragraph>
-            Kami selalu menjunjung tinggi akan integritas dan inovasi yang tiada henti terhadap bidang2 jasa yang kami sediakan yang berorientasi pada kepuasan pelanggan yang dihasilkan dari pendekatan pada setiap prosesnya.
+            We always uphold the integrity and relentless innovation in the services we provide that are customer satisfaction oriented resulting from our approach to every process.
           </Paragraph>
         </div>
       </div>
@@ -379,7 +415,9 @@ const HomeLayout = () => {
       <ServiceSection />
       <ReviewSection />
       <SubscribeSection />
-      <Footer />
+      <div className="mt-40">
+        <Footer />
+      </div>
     </>
   );
 };

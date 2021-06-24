@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="mt-40 h-auto bg-gray-200 w-full mobile:px-4 tablet:px-8 laptop:px-0">
+    <footer className="h-auto bg-gray-200 w-full mobile:px-4 tablet:px-8 laptop:px-0">
       <div className="mx-auto tablet:container pt-10 pb-2">
         <div className="grid tablet:grid-cols-2 mobile:grid-cols-1">
           <div>
@@ -15,30 +15,32 @@ const Footer = () => {
 
             <h3 className="mt-5 uppercase font-bold text-lg">Contact</h3>
             <table className="m-0  tablet:float-right">
-              <tr>
-                <td>
-                  Eko Rudy Santoso :
-                </td>
-                <td className="text-right text-gray-600">
-                  +62 812 7056 9728
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Idham Maulana :
-                </td>
-                <td className="text-right text-gray-600">
-                  +62 813 7807 4996
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Ilman Arif Wahyudi :
-                </td>
-                <td className="text-right text-gray-600">
-                  +62 812 6824 6119
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>
+                    Eko Rudy Santoso :
+                  </td>
+                  <td className="text-right text-gray-600">
+                    +62 812 7056 9728
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Idham Maulana :
+                  </td>
+                  <td className="text-right text-gray-600">
+                    +62 813 7807 4996
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Ilman Arif Wahyudi :
+                  </td>
+                  <td className="text-right text-gray-600">
+                    +62 812 6824 6119
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

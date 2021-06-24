@@ -8,7 +8,7 @@
         "gatsby"
     ],
     "scripts": {
-        "dev": "gatsby develop",
+        "dev": "gatsby develop -H 0.0.0.0",
         "start": "yarn clean &&  gatsby develop",
         "build": "yarn clean && gatsby build",
         "serve": "gatsby serve",
