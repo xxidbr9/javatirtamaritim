@@ -24,7 +24,7 @@ const BottomNavbar = (props) => {
   return (
     <>
       <nav className="w-full bg-white h-16 z-30 relative">
-        <div className="tablet:container tablet:px-0 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
+        <div className="tablet:container tablet:px-8 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
           <a href="/">
             <span className="uppercase font-bold text-2xl">JAVA TIRTA</span>
           </a>
@@ -63,7 +63,7 @@ const Navbar = (props) => {
         animate={{ y: yLog }}
         transition={{ duration: .5, bounce: 0.01, type: "spring" }}
         initial={{ y: -1000 }}>
-        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full tablet:container tablet:px-0">
+        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full tablet:container tablet:px-8">
           <a href="/"><li className={`${props.active === "/home" ? "text-red-500" : ""} + my-5`}>Home</li></a>
           <a href="/service"><li className={`${props.active === "/service" ? "text-red-500" : ""} + my-5`}>Service</li></a>
           <a href="/galery"><li className={`${props.active === "/galery" ? "text-red-500" : ""} + my-5`}>Galery</li></a>

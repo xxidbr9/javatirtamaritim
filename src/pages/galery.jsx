@@ -17,6 +17,7 @@ const GaleryPage = () => {
     }
   }`)
 
+
   return (
     <GaleryLayout imageData={edges} />
   );

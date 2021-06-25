@@ -58,7 +58,7 @@ const AboutLayout = () => {
           </div>
           <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
             <Title>
-              Mision
+              Motto
             </Title>
             <div>
               <Paragraph>

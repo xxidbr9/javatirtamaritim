@@ -200,22 +200,22 @@ const ServiceSection = () => {
   const listService = [
     {
       imgSrc: ImageList1,
-      text: "Ligula accumsan, ullamcorper",
+      text: "",
       href: "",
     },
     {
       imgSrc: ImageList2,
-      text: "Sem justo, sodales",
+      text: "",
       href: "",
     },
     {
       imgSrc: ImageList3,
-      text: "Nam vitae, ornare",
+      text: "",
       href: "",
     },
     {
       imgSrc: ImageList4,
-      text: "Eleifend sed turpis",
+      text: "",
       href: "",
     },
   ];
@@ -373,7 +373,7 @@ const HomeLayout = () => {
       <SortAbout />
       <ServiceSection />
       <ReviewSection />
-      <SubscribeSection />
+      {/* <SubscribeSection /> */}
       <div className="mt-40">
         <Footer />
       </div>
