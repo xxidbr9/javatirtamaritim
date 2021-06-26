@@ -35,7 +35,18 @@ const AboutLayout = () => {
       <Navbar active="/about" />
       <Hero title={"About Us"} ImageBanner={ImageBanner} />
       <section className="tablet:px-8 mobile:px-4 desktop:px-0">
+
         <div className="tablet:container mx-auto bg-white relative my-20 grid mobile:grid-cols-1 laptop:grid-cols-2 gap-12">
+          <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
+            <Title>
+              Motto
+            </Title>
+            <div>
+              <Paragraph>
+                The purpose of the historical establishment of the company/organization is aimed at the needs of marine transportation modes in Indonesia which are increasingly popular with the increasing need for services in the industrial or mining sector in Indonesia..
+              </Paragraph>
+            </div>
+          </div>
           <div class="py-16">
             <Title>
               Vision
@@ -48,16 +59,6 @@ const AboutLayout = () => {
           </div>
           <div class="py-16 laptop:pl-6">
             <Title>
-              Mision
-            </Title>
-            <div>
-              <Paragraph>
-                The purpose of the historical establishment of the company/organization is aimed at the needs of marine transportation modes in Indonesia which are increasingly popular with the increasing need for services in the industrial or mining sector in Indonesia..
-              </Paragraph>
-            </div>
-          </div>
-          <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
-            <Title>
               Motto
             </Title>
             <div>
@@ -66,6 +67,7 @@ const AboutLayout = () => {
               </Paragraph>
             </div>
           </div>
+
         </div>
       </section>
 
