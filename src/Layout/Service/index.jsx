@@ -28,7 +28,7 @@ const ItemService = ({
 const dataService = [
   {
     header: "FREIGHT FORWARDING",
-    text: "Logistics delivery services for exort and import businesses from one destination to another throught sea transportation modes"
+    text: "Lagat delvery series for export andinport businesses ort‘ne estan to nother trough soe anaporation modes"
   },
 
   {
@@ -64,11 +64,6 @@ const dataService = [
   {
     header: "NON DESTRUCTIVE TESTING (NDT) SERVICE",
     text: "Testting services or inspection of critical areas sucs as welding and base metal to detect crack or deflacts in the objects being tested without demaging the objects"
-  },
-
-  {
-    header: "MARINE, PATROLEUM AND CARGO SERVEYOR, CONSULTANT",
-    text: "Service for survey and inspection activities for shipping and cargo safety along with consulting services in the maritime sector"
   },
 
   {

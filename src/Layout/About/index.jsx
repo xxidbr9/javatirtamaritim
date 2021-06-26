@@ -39,7 +39,7 @@ const AboutLayout = () => {
         <div className="tablet:container mx-auto bg-white relative my-20 grid mobile:grid-cols-1 laptop:grid-cols-2 gap-12">
           <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
             <Title>
-              Motto
+              Mission
             </Title>
             <div>
               <Paragraph>

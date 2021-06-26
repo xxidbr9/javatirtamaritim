@@ -18,12 +18,13 @@ const ZoomImage = ({ imgSrc, ...props }) => {
   }, [])
 
   return (
-    <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange} overlayBgColorEnd={"rgba(0,0,0,.7)"}>
+    <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange} overlayBgColorEnd={"rgba(0,0,0,.7)"} className={` ${props.index % 4 == 0 ? "col-span-2" : "col-span-1"}`}>
       <img
         className={`p-1 ${isZoomed ? "" : "rounded-2xl"}`}
         src={imgSrc}
         alt="img galery"
-        style={{ width: "100%", display: "block", height:"100%" }}
+        // className={props.index % 4 === 0 ? "col-span-2" : "col-span-1"}
+        style={{ width: "100%", display: "block", height: "100%" }}
       />
     </ControlledZoom>
   )
@@ -34,10 +35,11 @@ const Masonary = ({ imageData, ...props }) => {
     <ResponsiveMasonry
       columnsCountBreakPoints={{ 320: 2, 768: 3, 1024: 5, 1440: 7 }}
     >
-      <Masonry g>
+      <Masonry>
         {imageData.map(({ node }, i) => (
           <ZoomImage
             key={i}
+            index={i}
             imgSrc={require("../../assets/images/" + node.name + "." + node.extension).default}
           />
         ))}
@@ -67,10 +69,11 @@ const GaleryLayout = ({ imageData, ...props }) => {
       <Hero title={"Our Galery"} ImageBanner={ImageBanner} />
       <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
         <div className="tablet:container mx-auto grid auto-cols-min mobile:grid-cols-1 tablet:grid-cols-2 ">
-          {imageData.map(({ node, ...props }) => {
+          {imageData.map(({ node, ...props }, index) => {
             return (
               <ZoomImage
                 key={props.i}
+                index={index}
                 imgSrc={require("../../assets/images/" + node.name + "." + node.extension).default}
               />
             )
