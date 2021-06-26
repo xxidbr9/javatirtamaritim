@@ -373,7 +373,7 @@ const HomeLayout = () => {
       <SortAbout />
       <ServiceSection />
       <ReviewSection />
-      <SubscribeSection />
+      {/* <SubscribeSection /> */}
       <div className="mt-40">
         <Footer />
       </div>
