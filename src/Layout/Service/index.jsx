@@ -73,6 +73,18 @@ const dataService = [
     header: "TANK CLEANING",
     text: "Services for cleaning activities for the remnants of cargo or dirt attached to the ship's tank becouse unclear water tanks act as breading ground for bacteria and making your water tank's environment susceptible to being contaminated",
   },
+  {
+    header: "SHIP CHANDLER",
+    text: "Service for the procurement and provision of primary,secondary and tertiary needs such as food, beverages and clothing",
+  },
+  {
+    header: "FAVBRICATION / SEAFASTENING",
+    text: "Welding services and procurement of tools for welding activities on ships or in workshops",
+  },
+  {
+    header: "DORING & STEVEDORING",
+    text: "Port services for loading and unloading cargo from ships to warehouses or other ships ",
+  }
 ];
 
 const HomeService = () => {
