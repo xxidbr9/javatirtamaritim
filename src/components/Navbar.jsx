@@ -32,7 +32,7 @@ const BottomNavbar = (props) => {
   return (
     <>
       <nav className="w-full bg-white h-16 z-30 relative">
-        <div className="tablet:container tablet:px-8 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
+        <div className="tablet:container tablet:px-0 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
           <a href="/">
             <span className="uppercase font-bold text-2xl">
               JAVA TIRTA MARITIM
@@ -92,7 +92,7 @@ const Navbar = (props) => {
         transition={{ duration: 0.5, bounce: 0.01, type: "spring" }}
         initial={{ y: -1000 }}
       >
-        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full tablet:container tablet:px-8">
+        <ul className="mx-auto mobile:flex flex-col font-medium mobile:w-full tablet:container tablet:px-0">
           <a href="/">
             <li
               className={`${

@@ -8,7 +8,7 @@ const ItemService = ({ children, Component, header }) => {
   return (
     <div className={`py-8 tablet:px-8 rounded-lg tablet:shadow-lg`}>
       {!!header && (
-        <div className="tablet:h-20">
+        <div className="tablet:h-32">
           <h1 className="text-lg mt-4 font-medium text-gray-800">{header}</h1>
         </div>
       )}
