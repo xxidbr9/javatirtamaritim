@@ -78,7 +78,7 @@ const dataService = [
 const HomeService = () => {
   return (
     <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
-      <div className="tablet:grid-rows-3 tablet:gap-8 tablet:container bottom-0 mx-auto relative bg-white z-40 h-auto grid mobile:grid-cols-1 laptop:grid-cols-4  laptop:grid-flow-col w-full">
+      <div className="tablet:grid-rows-3 laptop:gap-8 tablet:gap-4 tablet:container bottom-0 mx-auto relative bg-white z-40 h-auto grid mobile:grid-cols-1 laptop:grid-cols-4  laptop:grid-flow-col w-full">
         {dataService.map((item, index) => (
           <ItemService header={item.header} key={index} size={!!item.textSize ? item.textSize : "lg"}>
             {item.text}
