@@ -13,16 +13,17 @@ import ImageList1 from "../../assets/images/IMG_20210510_161914.jpg";
 import ImageList2 from "../../assets/images/IMG_20200728_102716.jpg";
 import ImageList3 from "../../assets/images/IMG_20210220_104537.jpg";
 import ImageList4 from "../../assets/images/IMG_20210319_163850.jpg";
-import { createBreakpoint } from 'react-use'
-import Footer from '../../components/Footer'
+import { createBreakpoint } from "react-use";
+import Footer from "../../components/Footer";
 
 const useBreakpoint = createBreakpoint();
 const Button = (props) => {
   return (
     <a
       {...props}
-      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${!!props.className && props.className
-        }`}
+      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${
+        !!props.className && props.className
+      }`}
     >
       {props.children}
     </a>
@@ -46,7 +47,8 @@ const Hero = () => (
             Solution to save your Time!
           </h1>
           <p className="text-white font-medium mt-8">
-            The best quality solution in every service in the world of shipping to get a sense of security and comfort
+            The best quality solution in every service in the world of shipping
+            to get a sense of security and comfort
           </p>
           <div className=" mt-10">
             <Button href="/about">About Us</Button>
@@ -66,7 +68,9 @@ const ItemService = ({
 }) => {
   return (
     <div
-      className={` ${!!isBorderLeft ? "laptop:border-l-2" : ""} ${!!isBorderRight ? "laptop:border-r-2" : ""} border-t-0 border-b-0 py-8 laptop:px-5 border-opacity-70`}
+      className={` ${!!isBorderLeft ? "laptop:border-l-2" : ""} ${
+        !!isBorderRight ? "laptop:border-r-2" : ""
+      } border-t-0 border-b-0 py-8 laptop:px-5 border-opacity-70`}
     >
       {!!Component && <Component className="w-12 h-12 text-red-500" />}
       {!!header && (
@@ -157,19 +161,23 @@ const SortAbout = () => {
     <section className="tablet:px-8 mobile:px-4 desktop:px-0">
       <div className="tablet:container mx-auto bg-white relative my-20 z-40 h-auto rounded-2xl grid mobile:grid-cols-1 laptop:grid-cols-2 gap-12">
         <div className="bg-grey-200 w-full h-full overflow-hidden rounded-xl mobile:hidden laptop:block">
-          <img src={ServiceImage} className="h-full w-full object-cover" alt="" />
+          <img
+            src={ServiceImage}
+            className="h-full w-full object-cover"
+            alt=""
+          />
         </div>
         <div class="py-16 laptop:pl-6">
           <AccentSmall>Affordable Price, Certified Forwader</AccentSmall>
-          <Title>
-            One Stop Service
-          </Title>
-          <Title>
-            And Stop Soolution
-          </Title>
+          <Title>One Stop Service</Title>
+          <Title>And Stop Soolution</Title>
           <div>
             <Paragraph>
-              The purpose of the historical establishment of the company/organization is aimed at the needs of marine transportation modes in Indonesia which are increasingly popular with the increasing need for services in the industrial or mining sector in Indonesia..
+              The purpose of the historical establishment of the
+              company/organization is aimed at the needs of marine
+              transportation modes in Indonesia which are increasingly popular
+              with the increasing need for services in the industrial or mining
+              sector in Indonesia..
             </Paragraph>
           </div>
           <div className="mt-24 mobile:w-full laptop:w-auto mobile:text-center laptop:text-left">
@@ -233,7 +241,10 @@ const ServiceSection = () => {
           </div>
           <div className="mobile:w-full tablet:w-3/4 text-center m-auto">
             <Paragraph>
-              The benefit of a company founded on 04 June 2021 is to provide the best service that upholds values of honesty, solubility, and effectiveness based on competence and qualifications in each area of the service we provide.
+              The benefit of a company founded on 04 June 2021 is to provide the
+              best service that upholds values of honesty, solubility, and
+              effectiveness based on competence and qualifications in each area
+              of the service we provide.
             </Paragraph>
           </div>
         </div>
@@ -243,49 +254,61 @@ const ServiceSection = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Button href="/galery">See Our Galery</Button>
+          <Button href="/galery">See Our Gallery</Button>
         </div>
       </div>
     </section>
   );
 };
 
-
 function Arrow(props) {
   const { className, style } = props;
   return (
     <div
-      // {...props}
       {...props}
-      className={`${!!className ? className : ""} w-10 h-10 overflow-hidden rounded-full shadow-lg text-2xl text-black mobile:hidden`}
-      style={{ ...style, color: "black", zIndex: "10", background: "black", height: "40px", width: "40px", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "2rem" }}
+      className={`${
+        !!className ? className : ""
+      } w-10 h-10 overflow-hidden rounded-full shadow-lg text-2xl text-black mobile:hidden`}
+      style={{
+        ...style,
+        color: "black",
+        zIndex: "10",
+        background: "black",
+        height: "40px",
+        width: "40px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: "2rem",
+      }}
     />
   );
 }
 
-
 const ReviewSection = () => {
-
-  const breakpoint = useBreakpoint()
+  const breakpoint = useBreakpoint();
   const setting = {
     infinite: true,
     autoplay: true,
     speed: 1000,
-    arrows: breakpoint === 'laptop' || breakpoint === 'laptopL',
+    arrows: breakpoint === "laptop" || breakpoint === "laptopL",
     autoplaySpeed: 2000,
     slidesToShow: breakpoint !== "laptop" && breakpoint !== "laptopL" ? 1 : 2,
     slidesToScroll: 1,
     nextArrow: <Arrow />,
-    prevArrow: <Arrow />
-  }
-
+    prevArrow: <Arrow />,
+  };
 
   const ReviewComponent = (props) => {
     return (
       <div className="w-full tablet:h-40 py-4 tablet:px-5 mobile:h-auto">
-        <div className="py-5 mobile:px-4 h-full w-full flex shadow-xl rounded-xl" >
+        <div className="py-5 mobile:px-4 h-full w-full flex shadow-xl rounded-xl">
           <div className="ml-5 tablet:h-16 tablet:w-16 mobile:h-14 mobile:w-14 overflow-hidden rounded-full bg-gray-100">
-            <img src={props.imgSrc} className="w-full h-full object-cover" alt="" />
+            <img
+              src={props.imgSrc}
+              className="w-full h-full object-cover"
+              alt=""
+            />
           </div>
           <div className="ml-5  h-full  tablet:w-3/4 mobile:w-4/5 overflow-hidden flex flex-col">
             <h4 className="text-base font-medium">{props.name}</h4>
@@ -293,34 +316,51 @@ const ReviewSection = () => {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
-  const text = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ipsam itaque assumenda in id quidem molestiae fugit autem ratione dignissimos!"
+  const text =
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ipsam itaque assumenda in id quidem molestiae fugit autem ratione dignissimos!";
   const dataReview = [
-    { text, name: "Barnando Akbarto", imgSrc: "https://source.unsplash.com/random/1" },
-    { text, name: "Andhana Utama", imgSrc: "https://source.unsplash.com/random/2" },
-    { text, name: "Ronaldo Wati", imgSrc: "https://source.unsplash.com/random/3" },
-    { text, name: "David Backam", imgSrc: "https://source.unsplash.com/random/4" },
-    { text, name: "Leonardo De Caprio", imgSrc: "https://source.unsplash.com/random/5" },
+    {
+      text,
+      name: "Eko Rudy Santoso",
+      imgSrc: "https://source.unsplash.com/random/1",
+    },
+    {
+      text,
+      name: "Andhana Utama",
+      imgSrc: "https://source.unsplash.com/random/2",
+    },
+    {
+      text,
+      name: "Ronaldo Wati",
+      imgSrc: "https://source.unsplash.com/random/3",
+    },
+    {
+      text,
+      name: "David Backam",
+      imgSrc: "https://source.unsplash.com/random/4",
+    },
+    {
+      text,
+      name: "Leonardo De Caprio",
+      imgSrc: "https://source.unsplash.com/random/5",
+    },
     { text, name: "John Cen", imgSrc: "https://source.unsplash.com/random/6" },
-  ]
+  ];
 
   return (
     <section className="py-10 text-center mobile:px-0 tablet:px-8 laptop:px-0 ">
       <div className="tablet:container mx-auto text-center">
-        <AccentSmall>
-          Our Beloved Review’s
-        </AccentSmall>
+        <AccentSmall>Our Beloved Review’s</AccentSmall>
         <div className="mobile:px-4 tablet:px-0">
           <Title>Here’s what our Happy client </Title>
           <Title>are saying about us :</Title>
         </div>
         <div className="my-10">
           <div className="mobile:w-full tablet:w-4/5 mx-auto text-left">
-            <Slider
-              {...setting}
-            >
+            <Slider {...setting}>
               {dataReview.map((e, i) => {
                 return (
                   <ReviewComponent
@@ -329,40 +369,22 @@ const ReviewSection = () => {
                     text={e.text}
                     key={i}
                   />
-                )
+                );
               })}
             </Slider>
           </div>
         </div>
         <div className="mobile:px-4 tablet:container mobile:w-full tablet:w-3/4 text-center m-auto">
           <Paragraph>
-            We always uphold the integrity and relentless innovation in the services we provide that are customer satisfaction oriented resulting from our approach to every process.
+            We always uphold the integrity and relentless innovation in the
+            services we provide that are customer satisfaction oriented
+            resulting from our approach to every process.
           </Paragraph>
         </div>
       </div>
-    </section>);
+    </section>
+  );
 };
-
-
-const SubscribeSection = (props) => {
-  return (
-    <div className="h-96 bg-red-500 z-20">
-      <div className="tablet:container mx-auto pt-20 text-center text-white">
-        <Title>Don’t miss any updates!</Title>
-        <div className="mx-auto mt-20 laptop:w-2/6 tablet:w-2/3 mobile:w-full h-72 bg-white rounded-xl shadow-xl text-black py-10 px-5">
-          <p>Subscribe email kita untuk lebih cepat dalam informasi terbaru dari kami</p>
-          <div className="relative h-full">
-            <div className="block w-full absolute bottom-10 z-20">
-              <input type="text" placeholder="eg: johndoe@mail.com" className="border-2 text-black bg-white py-3 px-6 rounded-xl outline-none focus:border-black w-full" />
-              <button className="outline-none w-full mt-5 bg-black text-white py-3 px-6 rounded-xl font-medium" >Subscribe</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  )
-}
 
 const HomeLayout = () => {
   return (
@@ -380,6 +402,5 @@ const HomeLayout = () => {
     </>
   );
 };
-
 
 export default withMainContext(HomeLayout);
