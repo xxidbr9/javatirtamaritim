@@ -22,13 +22,7 @@ const reducer = (state, action) => {
 const withMainContext = (App) => {
   return (props) => {
     const [state, dispatch] = useReducer(reducer, initState);
-    useEffect(() =>{
-      console.log(`
-CREATAD BY  : Barnando Akbarto Hidayatullah
-Gihub       : https://github.com/xxidbr9
-Linkdin     : https://linkedin.com/in/xxidbr9
-      `)
-    },[])
+    useEffect(() => {}, []);
     return (
       <MainContext.Provider value={{ state, dispatch }}>
         <App {...props} />
