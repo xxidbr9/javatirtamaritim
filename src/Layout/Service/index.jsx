@@ -4,12 +4,12 @@ import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import ImageBanner from "../../assets/images/international_trade.jpg";
 
-const ItemService = ({ children, Component, header }) => {
+const ItemService = ({ children, header, size }) => {
   return (
     <div className={`py-8 tablet:px-8 rounded-lg tablet:shadow-lg`}>
       {!!header && (
-        <div className="tablet:h-32">
-          <h1 className="text-lg mt-4 font-medium text-gray-800">{header}</h1>
+        <div className="tablet:h-20">
+          <h1 className={`laptop:text-${size} mobile:text-lg mt-4 font-medium text-gray-800`}>{header}</h1>
         </div>
       )}
       <p className="text-sm mt-2 text-gray-500">{children}</p>
@@ -60,6 +60,7 @@ const dataService = [
 
   {
     header: "UNDERWATER INSPECTION IN LIEU OF DRY DOCKING (UWILD) SURVEY",
+    textSize: "sm",
     text: "Services for inspecting activities of the outside of the ship below the waterline carried out when the ship remains above sea level with certain technological methods",
   },
 
@@ -79,7 +80,7 @@ const HomeService = () => {
     <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
       <div className="tablet:grid-rows-3 tablet:gap-8 tablet:container bottom-0 mx-auto relative bg-white z-40 h-auto grid mobile:grid-cols-1 laptop:grid-cols-4  laptop:grid-flow-col w-full">
         {dataService.map((item, index) => (
-          <ItemService header={item.header} key={index}>
+          <ItemService header={item.header} key={index} size={!!item.textSize ? item.textSize : "lg"}>
             {item.text}
           </ItemService>
         ))}

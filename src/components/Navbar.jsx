@@ -32,7 +32,7 @@ const BottomNavbar = (props) => {
   return (
     <>
       <nav className="w-full bg-white h-16 z-30 relative">
-        <div className="tablet:container tablet:px-0 mobile:px-4 desktop:px-0 h-full m-auto flex justify-between items-center">
+        <div className="laptop:container tablet:px-8 mobile:px-4 laptop:px-8 desktop:px-0 h-full mx-auto flex justify-between items-center">
           <a href="/">
             <span className="uppercase font-bold text-2xl">
               JAVA TIRTA MARITIM
@@ -87,7 +87,7 @@ const Navbar = (props) => {
       <TopNavbar />
       <BottomNavbar active={props.active} setShow={setShow} show={show} />
       <motion.div
-        className="mobile:px-4 tablet:px-0 mobile:bg-white mobile:w-full laptop:hidden z-10 absolute"
+        className="mobile:px-4 tablet:px-8 mobile:bg-white mobile:w-full laptop:hidden z-10 absolute"
         animate={{ y: yLog }}
         transition={{ duration: 0.5, bounce: 0.01, type: "spring" }}
         initial={{ y: -1000 }}
