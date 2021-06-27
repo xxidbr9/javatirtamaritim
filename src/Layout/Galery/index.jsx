@@ -38,7 +38,7 @@ const GaleryLayout = ({ imageData, ...props }) => {
   return (
     <React.Fragment>
       <Navbar active="/galery" />
-      <Hero title={"Our Galery"} ImageBanner={ImageBanner} />
+      <Hero title={"Our Gallery"} ImageBanner={ImageBanner} />
       <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
         <div className="tablet:container mx-auto grid auto-cols-min mobile:grid-cols-1 tablet:grid-cols-2 ">
           {imageData.map(({ node, ...props }, index) => {

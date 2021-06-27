@@ -51,7 +51,7 @@ const BottomNavbar = (props) => {
             <li
               className={`${props.active === "/service" ? "text-red-500" : ""}`}
             >
-              <a href="/service">Service</a>
+              <a href="/service">Services</a>
             </li>
             <li
               className={`${props.active === "/galery" ? "text-red-500" : ""}`}
@@ -61,7 +61,7 @@ const BottomNavbar = (props) => {
             <li
               className={`${props.active === "/about" ? "text-red-500" : ""}`}
             >
-              <a href="/about">About</a>
+              <a href="/about">About Us</a>
             </li>
           </ul>
         </div>
