@@ -1,7 +1,8 @@
 import React from "react";
 import GaleryLayout from "../Layout/Galery";
 import { useStaticQuery, graphql } from 'gatsby'
-
+import Head from 'react-helmet'
+import Favicon from '../assets/favicon.ico'
 
 
 const GaleryPage = () => {
@@ -19,7 +20,14 @@ const GaleryPage = () => {
 
 
   return (
-    <GaleryLayout imageData={edges} />
+    <>
+      <Head>
+        <title>About US | Java TIrta Maritim</title>
+        <link rel="shortcut icon" href={Favicon} type="image/x-icon" />
+        <link rel="icon" href={Favicon} type="image/x-icon" />
+      </Head>
+      <GaleryLayout imageData={edges} />
+    </>
   );
 };
 
