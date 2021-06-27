@@ -18,7 +18,7 @@ const ZoomImage = ({ imgSrc, ...props }) => {
   }, [])
 
   return (
-    <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange} overlayBgColorEnd={"rgba(0,0,0,.7)"} className={` ${props.index % 4 == 0 ? "col-span-2" : "col-span-1"}`}>
+    <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange} overlayBgColorEnd={"rgba(0,0,0,.7)"} className={` ${props.index % 4 === 0 ? "col-span-2" : "col-span-1"}`}>
       <img
         className={`p-1 ${isZoomed ? "" : "rounded-2xl"}`}
         src={imgSrc}
