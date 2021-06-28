@@ -170,7 +170,7 @@ const SortAbout = () => {
         <div class="py-16 laptop:pl-6">
           <AccentSmall>Affordable Price, Certified Forwader</AccentSmall>
           <Title>One Stop Service</Title>
-          <Title>And Stop Soolution</Title>
+          <Title>And One Stop Solution</Title>
           <div>
             <Paragraph>
               The purpose of the historical establishment of the

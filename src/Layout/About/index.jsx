@@ -4,14 +4,6 @@ import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import ImageBanner from "../../assets/images/international_trade.jpg";
 
-// const AccentSmall = (props) => {
-//   return (
-//     <span {...props} className="text-red-500 font-medium">
-//       {props.children}
-//     </span>
-//   );
-// };
-
 const Title = (props) => {
   return (
     <h4 {...props} className="mt-1 text-3xl font-semibold">
@@ -38,7 +30,7 @@ const AboutLayout = () => {
           <div class="py-16 laptop:pl-6 tablet:col-span-2 tablet:text-center">
             <Title>Motto</Title>
             <div>
-              <Paragraph>One stop service and Stop solution</Paragraph>
+              <Paragraph>One stop service and One stop solution</Paragraph>
             </div>
           </div>
           <div class="py-16">

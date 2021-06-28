@@ -9,7 +9,11 @@ const ItemService = ({ children, header, size }) => {
     <div className={`py-8 tablet:px-8 rounded-lg tablet:shadow-lg`}>
       {!!header && (
         <div className="tablet:h-20">
-          <h1 className={`laptop:text-${size} mobile:text-lg mt-4 font-medium text-gray-800`}>{header}</h1>
+          <h1
+            className={`laptop:text-${size} mobile:text-lg mt-4 font-medium text-gray-800`}
+          >
+            {header}
+          </h1>
         </div>
       )}
       <p className="text-sm mt-2 text-gray-500">{children}</p>
@@ -65,7 +69,7 @@ const dataService = [
   },
 
   {
-    header: "UNDERWATER SURVEY AND HULL CLEANSING",
+    header: "UNDERWATER SURVEY AND HULL CLEANING",
     text: "Hull inspection and cleaning services such as sticking coral without going through the dry dock process",
   },
 
@@ -78,13 +82,13 @@ const dataService = [
     text: "Service for the procurement and provision of primary,secondary and tertiary needs such as food, beverages and clothing",
   },
   {
-    header: "FAVBRICATION / SEAFASTENING",
+    header: "FABRICATION / SEAFASTENING",
     text: "Welding services and procurement of tools for welding activities on ships or in workshops",
   },
   {
     header: "DORING & STEVEDORING",
     text: "Port services for loading and unloading cargo from ships to warehouses or other ships ",
-  }
+  },
 ];
 
 const HomeService = () => {
@@ -92,7 +96,11 @@ const HomeService = () => {
     <section className="tablet:px-8 mobile:px-4 desktop:px-0 py-8">
       <div className="tablet:grid-rows-4 laptop:gap-8 tablet:gap-4 tablet:container bottom-0 mx-auto relative bg-white z-40 h-auto grid mobile:grid-cols-1 laptop:grid-cols-4  w-full">
         {dataService.map((item, index) => (
-          <ItemService header={item.header} key={index} size={!!item.textSize ? item.textSize : "lg"}>
+          <ItemService
+            header={item.header}
+            key={index}
+            size={!!item.textSize ? item.textSize : "lg"}
+          >
             {item.text}
           </ItemService>
         ))}
