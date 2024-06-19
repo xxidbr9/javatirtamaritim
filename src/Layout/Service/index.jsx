@@ -31,6 +31,10 @@ const dataService = [
     text: "Services for survey and inspection activities for shipping and cargo safety along with consulting in the maritime sector"
   },
   {
+    header: "TOWING AND SALVAGE SERVICES",
+    text: "While towage can be generally viewed as the rescue, salvage is the retrieval of what is left after an accident. Marine salvage is usually carried out after a casualty to a large boat or ship that has rendered it beyond towing."
+  },
+  {
     header: "SHIP / EQUIPMENT CHARTERING",
     text: "Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment",
   },
