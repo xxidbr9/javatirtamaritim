@@ -22,13 +22,16 @@ const ItemService = ({ children, header, size }) => {
 };
 
 const dataService = [
+  // {
+  //   header: "FREIGHT FORWARDING",
+  //   text: "Lagat delvery series for export andinport businesses ort‘ne estan to nother trough soe anaporation modes",
+  // },
   {
-    header: "FREIGHT FORWARDING",
-    text: "Lagat delvery series for export andinport businesses ort‘ne estan to nother trough soe anaporation modes",
+    header: "MARINE, PETROLEUM, AND CARGO SURVEYOR, CONSULTANT",
+    text: "Services for survey and inspection activities for shipping and cargo safety along with consulting in the maritime sector"
   },
-
   {
-    header: "SHIP / EQUIPMET CHARTERING",
+    header: "SHIP / EQUIPMENT CHARTERING",
     text: "Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment",
   },
 
@@ -51,28 +54,23 @@ const dataService = [
     header: "DOCKING MANAGEMENT",
     text: "Management services before to after ship repair carried out at shipyard",
   },
-
   {
     header: "SHIP MAINTENANCE",
     text: "Maintenance and repair services for structural and port supporting equipment",
   },
-
   {
     header: "NON DESTRUCTIVE TESTING (NDT) SERVICE",
     text: "Testting services or inspection of critical areas sucs as welding and base metal to detect crack or deflacts in the objects being tested without demaging the objects",
   },
-
   {
     header: "UNDERWATER INSPECTION IN LIEU OF DRY DOCKING (UWILD) SURVEY",
     textSize: "sm",
     text: "Services for inspecting activities of the outside of the ship below the waterline carried out when the ship remains above sea level with certain technological methods",
   },
-
   {
     header: "UNDERWATER SURVEY AND HULL CLEANING",
     text: "Hull inspection and cleaning services such as sticking coral without going through the dry dock process",
   },
-
   {
     header: "TANK CLEANING",
     text: "Services for cleaning activities for the remnants of cargo or dirt attached to the ship's tank becouse unclear water tanks act as breading ground for bacteria and making your water tank's environment susceptible to being contaminated",
@@ -85,10 +83,10 @@ const dataService = [
     header: "FABRICATION / SEAFASTENING",
     text: "Welding services and procurement of tools for welding activities on ships or in workshops",
   },
-  {
-    header: "DORING & STEVEDORING",
-    text: "Port services for loading and unloading cargo from ships to warehouses or other ships ",
-  },
+  // {
+  //   header: "DORING & STEVEDORING",
+  //   text: "Port services for loading and unloading cargo from ships to warehouses or other ships ",
+  // },
 ];
 
 const HomeService = () => {

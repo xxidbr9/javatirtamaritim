@@ -22,6 +22,12 @@ const Footer = () => {
             <table className="m-0  tablet:float-right">
               <tbody>
                 <tr>
+                  <td>Ilman Arif Wahyudi (Director) :</td>
+                  <td className="text-right text-gray-600">
+                    +62 812 6824 6119
+                  </td>
+                </tr>
+                <tr>
                   <td>Eko Rudy Santoso :</td>
                   <td className="text-right text-gray-600">
                     +62 812 7056 9728
@@ -33,12 +39,7 @@ const Footer = () => {
                     +62 813 7807 4996
                   </td>
                 </tr>
-                <tr>
-                  <td>Ilman Arif Wahyudi :</td>
-                  <td className="text-right text-gray-600">
-                    +62 812 6824 6119
-                  </td>
-                </tr>
+
               </tbody>
             </table>
           </div>

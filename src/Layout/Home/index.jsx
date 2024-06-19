@@ -21,9 +21,8 @@ const Button = (props) => {
   return (
     <a
       {...props}
-      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${
-        !!props.className && props.className
-      }`}
+      className={`font-medium text-white bg-black py-3 px-6 rounded-xl ${!!props.className && props.className
+        }`}
     >
       {props.children}
     </a>
@@ -68,9 +67,8 @@ const ItemService = ({
 }) => {
   return (
     <div
-      className={` ${!!isBorderLeft ? "laptop:border-l-2" : ""} ${
-        !!isBorderRight ? "laptop:border-r-2" : ""
-      } border-t-0 border-b-0 py-8 laptop:px-5 border-opacity-70`}
+      className={` ${!!isBorderLeft ? "laptop:border-l-2" : ""} ${!!isBorderRight ? "laptop:border-r-2" : ""
+        } border-t-0 border-b-0 py-8 laptop:px-5 border-opacity-70`}
     >
       {!!Component && <Component className="w-12 h-12 text-red-500" />}
       {!!header && (
@@ -84,8 +82,8 @@ const ItemService = ({
 const HomeService = () => {
   const dataService = [
     {
-      header: "FREIGHT FORWARDING",
-      text: "Logistics delivery services for exort and import businesses from one destination to another throught sea transportation modes",
+      header: "MARINE, PETROLEUM, AND CARGO SURVEYOR, CONSULTANT",
+      text: "Services for survey and inspection activities for shipping and cargo safety along with consulting in the maritime sector",
       icon: BiWallet,
       isBorderLeft: false,
       isBorderRight: false,
@@ -266,9 +264,8 @@ function Arrow(props) {
   return (
     <div
       {...props}
-      className={`${
-        !!className ? className : ""
-      } w-10 h-10 overflow-hidden rounded-full shadow-lg text-2xl text-black mobile:hidden`}
+      className={`${!!className ? className : ""
+        } w-10 h-10 overflow-hidden rounded-full shadow-lg text-2xl text-black mobile:hidden`}
       style={{
         ...style,
         color: "black",
@@ -303,13 +300,13 @@ const ReviewSection = () => {
     return (
       <div className="w-full tablet:h-40 py-4 tablet:px-5 mobile:h-auto">
         <div className="py-5 mobile:px-4 h-full w-full flex shadow-xl rounded-xl">
-          <div className="ml-5 tablet:h-16 tablet:w-16 mobile:h-14 mobile:w-14 overflow-hidden rounded-full bg-gray-100">
+          {/* <div className="ml-5 tablet:h-16 tablet:w-16 mobile:h-14 mobile:w-14 overflow-hidden rounded-full bg-gray-100">
             <img
               src={props.imgSrc}
               className="w-full h-full object-cover"
               alt=""
             />
-          </div>
+          </div> */}
           <div className="ml-5  h-full  tablet:w-3/4 mobile:w-4/5 overflow-hidden flex flex-col">
             <h4 className="text-base font-medium">{props.name}</h4>
             <p className="text-sm text-gray-500 italic">{props.text}</p>
@@ -323,31 +320,31 @@ const ReviewSection = () => {
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ipsam itaque assumenda in id quidem molestiae fugit autem ratione dignissimos!";
   const dataReview = [
     {
-      text,
-      name: "Eko Rudy Santoso",
+      text: "Used their ship repair services - fast turnaround, professional crew, and my vessel is running smoothly again. 5 stars!",
+      name: "Capt. John",
       imgSrc: "https://source.unsplash.com/random/1",
     },
     {
-      text,
-      name: "Andhana Utama",
+      text: "Highly recommend Java Tirta Maritim for chartering! They found the perfect ship for my needs at a competitive rate. Saved me time and money",
+      name: "Sarah L",
       imgSrc: "https://source.unsplash.com/random/2",
     },
     {
-      text,
-      name: "Ronaldo Wati",
+      text: "Always reliable for cargo surveys. Detailed reports and clear communication give me peace of mind",
+      name: "David T",
       imgSrc: "https://source.unsplash.com/random/3",
     },
     {
-      text,
-      name: "David Backam",
+      text: "Their one-stop shop for all things maritime is fantastic. From bunkering to docking management, they handle everything efficiently",
+      name: "Michael S",
       imgSrc: "https://source.unsplash.com/random/4",
     },
     {
-      text,
-      name: "Leonardo De Caprio",
+      text: "The crew was very professional and helpful. I would definitely recommend Java Tirta Maritim!",
+      name: "Capt. Anderson",
       imgSrc: "https://source.unsplash.com/random/5",
     },
-    { text, name: "John Cen", imgSrc: "https://source.unsplash.com/random/6" },
+    { text: "Great experience with their machinery and electrical services! They diagnosed the problem quickly and got my equipment back online fast. Kept me informed throughout the process. Highly recommend!", name: "Jane A", imgSrc: "https://source.unsplash.com/random/6" },
   ];
 
   return (
