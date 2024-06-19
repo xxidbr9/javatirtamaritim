@@ -316,8 +316,6 @@ const ReviewSection = () => {
     );
   };
 
-  const text =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae ipsam itaque assumenda in id quidem molestiae fugit autem ratione dignissimos!";
   const dataReview = [
     {
       text: "Used their ship repair services - fast turnaround, professional crew, and my vessel is running smoothly again. 5 stars!",
