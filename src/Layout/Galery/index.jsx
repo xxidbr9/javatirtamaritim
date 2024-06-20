@@ -34,7 +34,6 @@ const ZoomImage = ({ imgSrc, ...props }) => {
 };
 
 const GaleryLayout = ({ imageData, ...props }) => {
-  console.log(imageData);
   return (
     <React.Fragment>
       <Navbar active="/galery" />
