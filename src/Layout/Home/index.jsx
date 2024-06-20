@@ -40,7 +40,7 @@ const Hero = () => (
       <div className="tablet:container tablet:px-8 mobile:px-4 desktop:px-0 m-auto z-50">
         <div className="w-full mt-20">
           <h1 className="mobile:text-4xl tablet:text-6xl text-white font-bold">
-            Reliable & Express Logistic
+            Reliable & Express Marine Service and Consultant
           </h1>
           <h1 className="mobile:text-4xl tablet:text-6xl text-white font-bold mt-4">
             Solution to save your Time!
@@ -90,7 +90,7 @@ const HomeService = () => {
     },
 
     {
-      header: "SHIP / EQUIPMET CHARTERING ",
+      header: "SHIP / EQUIPMENT CHARTERING ",
       text: "Rental service for modes of sea transportation and heavy equipment needs, such as ships and heavy equipment",
       icon: FiSearch,
       isBorderLeft: true,
