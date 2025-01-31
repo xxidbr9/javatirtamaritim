@@ -28,7 +28,7 @@ const Footer = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>Eko Rudy Santoso :</td>
+                  <td>M. Alvin Abror :</td>
                   <td className="text-right text-gray-600">
                     +62 812 7056 9728
                   </td>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <tr>
                   <td>Idham Maulana :</td>
                   <td className="text-right text-gray-600">
-                    +62 813 7807 4996
+                    +62 857 4827 6654
                   </td>
                 </tr>
 
