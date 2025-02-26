@@ -28,12 +28,6 @@ const Footer = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>M. Alvin Abror :</td>
-                  <td className="text-right text-gray-600">
-                    +62 812 7056 9728
-                  </td>
-                </tr>
-                <tr>
                   <td>Idham Maulana :</td>
                   <td className="text-right text-gray-600">
                     +62 857 4827 6654
